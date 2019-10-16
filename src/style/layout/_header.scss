@@ -1,0 +1,250 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 995px;
+    background-image: url(../../img/foreground.png);
+    background-size: cover;
+    background-position: center center;
+
+    nav {
+        width: 100%;
+        z-index: 1;
+        background-color: transparent;
+        position: relative;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-brand {
+                display: flex;
+                padding: 40px 0;
+
+                .white-box {
+                    background-color: $white;
+                    width: 42px;
+                    height: 50px;
+                    border: 3px solid $white;
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $grey;
+                        font: 36px 'OpenSans-Bold', sans-serif;
+                        margin: 0;
+                    }
+                }
+
+                .transparent-box {
+                    background-color: transparent;
+                    width: 89px;
+                    height: 50px;
+                    border: 3px solid $white;
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $white;
+                        font: 36px 'OpenSans-Light', sans-serif;
+                        margin: 0;
+                    }
+                }
+
+            }
+
+            .nav-menu {
+                .navigation {
+                    display: flex;
+
+                    .nav-item {
+
+                        +li {
+                            margin-left: 58px;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+
+
+                            .nav-link {
+                                color: #e74c3c;
+                                font-family: 'OpenSans-Bold', sans-serif;
+
+                                &::after {
+                                    display: block;
+                                }
+                            }
+
+                        }
+
+
+                        .nav-link {
+                            text-decoration: none;
+                            font: 14px 'OpenSans-Regular', sans-serif;
+                            color: $white;
+
+
+                            &::after {
+                                content: "";
+                                display: none;
+                                width: 44px;
+                                height: 1px;
+                                background-color: #e74c3c;
+                                margin: 22px auto 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .carousel-item {
+            position: relative;
+
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                h4 {
+                    font: 24px 'SourceSansPro-Regular', sans-serif;
+                    color: $white;
+                    margin: 0 auto 15px;
+                }
+
+                h1 {
+                    font: 72px 'OpenSans-Bold', sans-serif;
+                    color: $white;
+                    margin: 0 auto 25px;
+                    letter-spacing: 4px;
+                }
+
+                
+
+                p {
+                    font: 14px "OpenSans-Regular", sans-serif;
+                    color: $light-grey;
+                    text-align: center;
+                    max-width: 674px;
+                    margin-bottom: 70px;
+                    line-height: 1.9;
+                }
+
+                .section-buttons {
+                    display: flex;
+
+                    button {
+                        width: 225px;
+                        height: 56px;
+                        border: 1px solid $white;
+                        border-radius: 4px;
+                        background: transparent;
+                        color: $white;
+                        font: 14px 'OpenSans-Bold', sans-serif;
+                        outline: none;
+
+                        +button {
+                            margin-left: 30px;
+                        }
+
+                        &:hover {
+                            background: $red;
+                            cursor: pointer;
+                            border: 1px solid $red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .next,
+        .prev {
+            width: 45px;
+            height: 45px;
+            background-color: $dark-grey;
+            position: absolute;
+            border-radius: 2px;
+            transform: translateY(-50%);
+            top: 45%;
+
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                i {
+                    color: $brown;
+                }
+            }
+
+            &:hover {
+                background-color: $red;
+
+                i {
+                    color: $white;
+                }
+            }
+        }
+
+        .prev {
+            left: 50px;
+        }
+
+        .next {
+            right: 50px;
+        }
+    }
+
+    .circle-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -4%;
+
+        svg {
+            circle {
+                transform-origin: 50% 50%;
+            }
+
+            .inside {
+                fill: $light;
+            }
+
+            .outside {
+                fill: transparent;
+                stroke: $grey;
+                opacity: 0.7;
+                stroke-width: 7px;
+                stroke-dasharray: 142 300;
+                transform: rotate(181deg);            
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

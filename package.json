@@ -1,0 +1,27 @@
+{
+  "name": "petmio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "anuitex",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

@@ -1,0 +1,169 @@
+.our-pricing {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+
+    .container {
+        padding: 150px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            @include textCaption;
+        }
+
+        p {
+            @include textDescription;
+        }
+
+
+        .figure {
+            .circle {
+
+                &::after,
+                &::before {
+                    background-color: $new-grey;
+                }
+            }
+        }
+
+        .plans {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+
+            .plan-item {
+                display: flex;
+                flex-direction: column;
+
+                &:hover {
+                    cursor: pointer;
+
+                    .top {
+                        background-color: $red;
+
+                        .circle-wrapper {
+
+                            .text-wrapper {
+                                h3 {
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+
+                    .down {
+                        button {
+                            background-color: $red;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+
+
+                .top {
+                    width: 380px;
+                    height: 205px;
+                    background-color: $new-grey;
+                    position: relative;
+
+
+                    h3 {
+                        margin-top: 50px;
+                        font: 24px 'OpenSans-SemiBold', sans-serif;
+                        color: $white;
+                        text-align: center;
+                    }
+
+                    .circle-wrapper {
+                        position: absolute;
+                        z-index: 1;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -82px;
+
+                        svg {
+                            circle {
+                                transform-origin: 50% 50%;
+                            }
+
+                            .inside {
+                                fill: $white;
+
+                            }
+
+                            .outside {
+                                fill: transparent;
+                                stroke: $grey;
+                                opacity: 0.3;
+                                stroke-width: 7px;
+                                stroke-dasharray: 150 300;
+                                transform: rotate(-186deg);
+                            }
+                        }
+
+                        .text-wrapper {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+                            h3 {
+                                font: 40px 'SourceSansPro-Regular', sans-serif;
+                                font-weight: bold;
+                                color: $new-grey;
+                                text-align: center;
+                                margin: 0;
+                                z-index: 3;
+                            }
+
+                            p {
+                                font: 13px 'SourceSansPro-Regular', sans-serif;
+                                color: $new-grey;
+                                text-align: center;
+                                margin: 0;
+                                z-index: 3;
+                            }
+                        }
+                    }
+
+                }
+
+                .down {
+                    width: 380px;
+                    height: 375px;
+                    background-color: $light;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    ul {
+                        margin: 100px auto 20px;
+
+                        li {
+                            font: 14px 'OpenSans-SemiBold', sans-serif;
+                            color: $new-grey;
+                            text-align: center;
+                            list-style: none;
+                            margin-bottom: 25px;
+                        }
+                    }
+
+                    button {
+                        width: 145px;
+                        height: 45px;
+                        border: none;
+                        border-radius: 4px;
+                        background-color: $new-grey;
+                        font: 12px 'OpenSans-SemiBold', sans-serif;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

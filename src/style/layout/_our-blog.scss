@@ -1,0 +1,89 @@
+.our-blog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .container {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        h2 {
+            @include textCaption;
+        }
+
+        p {
+            @include textDescription;
+        }
+
+        .figure {
+            .circle {
+
+                &::after,
+                &::before {
+                    background-color: $new-grey;
+                }
+            }
+        }
+    }
+    .news {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 48px;
+
+        .text {
+            background-color: $red;
+        }
+        .block {
+            width: 25%;
+            height: auto;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .hover-block {
+                display: none;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                background-color: rgba(231, 76, 60, .5);
+
+                .hover-text {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 50px;
+
+                    h5 {
+                        font: 24px 'SourceSansPro-Regular', sans-serif;
+                        color: $white;
+                        margin: 0 0 10px;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 44px;
+                            height: 4px;
+                            background-color: $white;
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    h6 {
+                        font: 14px 'OpenSans-Regular', sans-serif;
+                        color: $white;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

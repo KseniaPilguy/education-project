@@ -1,0 +1,73 @@
+.people {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url(../../img/bg-people.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 0 130px;
+
+    &:hover {
+        .hover {
+            display: block;
+        }
+    }
+
+    .hover {
+        position: absolute;
+        top: 0;
+        display: none;
+        background-color: rgba(000, 000, 000, .5);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+                width: 112px;
+                position: relative;
+                margin-bottom: 30px;
+
+                circle {
+                    fill: transparent;
+                    stroke: $white;
+                    stroke-width: 2px;
+                }
+            }
+
+            img {
+                position: absolute;
+                top: 26%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            h6 {
+                font: 30px 'SourceSansPro-Regular', sans-serif;
+                font-weight: bold;
+                color: $white;
+                margin: 0 auto 5px;
+
+            }
+
+            p {
+                font: 18px 'SourceSansPro-Regular', sans-serif;
+                color: $white;
+                margin: 0;
+
+            }
+        }
+    }
+}

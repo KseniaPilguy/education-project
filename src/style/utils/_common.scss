@@ -1,0 +1,35 @@
+.figure {
+    position: relative;
+    margin-bottom: 25px;
+
+    .circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 10px;
+        background-color: $red;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: -94px;
+            transform: translateY(-50%);
+            background-color: #fff;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: 22px;
+            transform: translateY(-50%);
+            background-color: #fff;
+        }
+    }
+}
