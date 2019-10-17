@@ -23,8 +23,20 @@
          url(../../fonts/OpenSans-Light.woff);
 }
 @font-face {
+    font-family: 'OpenSans-Italic';
+    src: url(../../fonts/OpenSans-Italic.eot),
+         url(../../fonts/OpenSans-Italic.ttf),
+         url(../../fonts/OpenSans-Italic.woff);
+}
+@font-face {
     font-family: 'SourceSansPro-Regular';
     src: url(../../fonts/SourceSansPro-Regular.eot),
          url(../../fonts/SourceSansPro-Regular.ttf),
          url(../../fonts/SourceSansPro-Regular.woff);
+}
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url(../../fonts/MyriadPro-Regular.eot),
+         url(../../fonts/MyriadPro-Regular.ttf),
+         url(../../fonts/MyriadPro-Regular.woff);
 }
