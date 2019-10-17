@@ -11,6 +11,8 @@
         flex-direction: column;
         align-items: center;
 
+
+
         h2 {
             @include textCaption;
         }
@@ -34,6 +36,13 @@
             display: flex;
             justify-content: space-between;
             margin-top: 48px;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: 1150px) {
+                align-items: center;
+                flex-direction: column;
+            }
+
 
             .ideas {
                 width: 666px;
@@ -43,77 +52,126 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
                 margin-top: 45px;
                 z-index: 1;
 
-                .square {
-                    width: 72px;
-                    height: 72px;
-                    background-color: $red;
-                    transform: rotate(45deg);
-                    position: relative;
-                    border-radius: 4px;
+                @media screen and (max-width: 1150px) {
+                    margin-top: 0;
+                }
 
-                    img {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%) rotate(-45deg);
+                @media screen and (max-width: 700px) {
+                    width: 566px;
+                }
+
+                @media screen and (max-width: 580px) {
+                    width: 439px;
+                    padding: 50px 20px;
+                }
+                @media screen and (max-width: 450px) {
+                    width: 318px;
+                }
+
+                .idea-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .square {
+                        width: 72px;
+                        height: 72px;
+                        background-color: $red;
+                        transform: rotate(45deg);
+                        position: relative;
+                        border-radius: 4px;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                        }
+                    }
+
+                    h4 {
+                        margin: 50px auto 0;
+                        color: $text-dark-color;
+                        font: 18px 'OpenSans-SemiBold', sans-serif;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            margin: 29px auto 27px;
+                            width: 41px;
+                            height: 1px;
+                            background-color: $new-grey;
+                        }
+                    }
+
+                    p {
+                        max-width: 446px;
+                        color: $new-grey;
+                        font: 14px 'SourceSansPro-Regular', sans-serif;
+                        line-height: 1.5;
+                        margin: 0 auto 45px;
+                    }
+
+                    button {
+                        width: 145px;
+                        height: 46px;
+                        background-color: $red;
+                        border: none;
+                        font: 12px 'OpenSans-SemiBold', sans-serif;
+                        color: $white;
+                        margin-bottom: 50px;
+                        cursor: pointer;
                     }
                 }
 
-                h4 {
-                    margin: 50px auto 0;
-                    color: $text-dark-color;
-                    font: 18px 'OpenSans-SemiBold', sans-serif;
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        margin: 29px auto 27px;
-                        width: 41px;
-                        height: 1px;
-                        background-color: $new-grey;
-                    }
-                }
-
-                p {
-                    max-width: 446px;
-                    color: $new-grey;
-                    font: 14px 'SourceSansPro-Regular', sans-serif;
-                    line-height: 1.5;
-                    margin: 0 auto 45px;
-                }
-
-                button {
-                    width: 145px;
-                    height: 46px;
-                    background-color: $red;
-                    border: none;
-                    font: 12px 'OpenSans-SemiBold', sans-serif;
-                    color: $white;
-                    margin-bottom: 50px;
-                }
-
-                .slider-dots {
+                .slider-dots-case {
                     display: flex;
                     justify-content: center;
 
-                    .slider-dots-item {
+                    .case-dots-item {
+                        display: flex;
+                        justify-content: center;
                         width: 14px;
                         height: 12px;
                         border-radius: 10px;
                         background-color: $light;
                         margin: 0 4px;
+                        cursor: pointer;
+                    }
+
+                    .active {
+                        background-color: $red;
                     }
                 }
+
             }
 
             .image {
                 width: 585px;
                 height: 720px;
                 margin-left: -110px;
+
+                @media screen and (max-width: 1150px) {
+                    margin: 40px 0 0 0;
+                }
+
+                @media screen and (max-width: 700px) {
+                    width: 514px;
+                    height: 651px;
+                }
+
+                @media screen and (max-width: 550px) {
+                    width: 335px;
+                    height: 468px;
+                }
+
+                @media screen and (max-width: 320px) {
+                    width: 283px;
+                    height: 429px;
+                }
 
                 img {
                     width: 100%;

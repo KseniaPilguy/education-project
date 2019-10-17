@@ -4,6 +4,14 @@
     display: flex;
     position: relative;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+
+
+
+
     .servise-left {
         background-color: $service-bg;
         width: 60%;
@@ -12,84 +20,122 @@
         position: relative;
         padding-bottom: 90px;
 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
         .container {
             padding: 90px 80px 0 0;
 
-            h2 {
-                font: 36px 'SourceSansPro-Regular', sans-serif;
-                font-weight: bold;
-                letter-spacing: 2px;
-                color: $white;
-                margin-right: 29px;
-                text-align: right;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    width: 6px;
-                    height: 36px;
-                    background-color: $red;
-                    position: absolute;
-                    right: -28px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
+            @media screen and (max-width: 768px) {
+                padding-right: 0;
             }
 
-            h3 {
-                font: 18px 'OpenSans-SemiBold', sans-serif;
-                color: $red;
-                text-align: right;
-                margin: 40px 0 15px;
-            }
+            .service-item {
+                animation: fade .8s;
 
-            p {
-                text-align: right;
-                color: $new-grey;
-                font: 14px 'SourceSansPro-Regular', sans-serif;
-                line-height: 1.5;
-            }
+                h2 {
+                    font: 36px 'SourceSansPro-Regular', sans-serif;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    color: $white;
+                    margin-right: 29px;
+                    text-align: right;
+                    position: relative;
 
-            .circle-wrapper {
-                position: absolute;
-                right: -36px;
-                z-index: 1;
-                margin-top: -85px;
-
-                svg {
-                    circle {
-                        transform-origin: 50% 50%;
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                        margin-right: 0;
                     }
 
-                    .inside {
-                        fill: $light;
-                    }
-
-                    .outside {
-                        fill: transparent;
-                        stroke: $grey;
-                        opacity: 0.7;
-                        stroke-width: 7px;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 36px;
+                        background-color: $red;
+                        position: absolute;
+                        right: -28px;
+                        top: 50%;
+                        transform: translateY(-50%);
                     }
                 }
 
-                img {
+                h3 {
+                    font: 18px 'OpenSans-SemiBold', sans-serif;
+                    color: $red;
+                    text-align: right;
+                    margin: 40px 0 15px;
+
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    text-align: right;
+                    color: $new-grey;
+                    font: 14px 'SourceSansPro-Regular', sans-serif;
+                    line-height: 1.5;
+
+                    @media screen and (max-width: 1300px) {
+                        margin-left: 30%;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        text-align: left;
+                        margin-left: 47px;
+                    }
+                }
+
+                .circle-wrapper {
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    right: -36px;
+                    z-index: 1;
+                    margin-top: -85px;
+
+                    @media screen and (max-width: 768px) {
+                        right: 55px;
+                    }
+
+                    svg {
+                        circle {
+                            transform-origin: 50% 50%;
+                        }
+
+                        .inside {
+                            fill: $light;
+                        }
+
+                        .outside {
+                            fill: transparent;
+                            stroke: $grey;
+                            opacity: 0.7;
+                            stroke-width: 7px;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
         }
     }
 
     .servise-right {
-        position: relative;
         background-image: url(../../img/service-bg.png);
         background-size: cover;
         background-position: center center;
         width: 50%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 550px;
+        }
     }
 
     .slider-dots {
@@ -100,11 +146,43 @@
         top: 50%;
         transform: translateY(-50%);
 
+        @media screen and (max-width: 768px) {
+            flex-direction: row;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+        }
+
         .slider-dots-item {
             height: 34px;
             width: 1px;
             background-color: $dots;
             margin-bottom: 11px;
+
+            @media screen and (max-width: 768px) {
+                width: 34px;
+                height: 1px;
+                margin-right: 10px;
+            }
         }
+
+        .active {
+            background-color: $red;
+        }
+    }
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: .2;
+        z-index: 2;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 2;
+
     }
 }

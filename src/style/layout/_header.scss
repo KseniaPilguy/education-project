@@ -74,11 +74,16 @@ header {
 
 
                             .nav-link {
+                                position: relative;
                                 color: #e74c3c;
                                 font-family: 'OpenSans-Bold', sans-serif;
 
                                 &::after {
                                     display: block;
+                                    position: absolute;
+                                    top: 20px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                 }
                             }
 
@@ -115,6 +120,7 @@ header {
 
         .carousel-item {
             position: relative;
+            animation: show 2s;
 
             .container {
                 display: flex;
@@ -136,9 +142,10 @@ header {
                     color: $white;
                     margin: 0 auto 25px;
                     letter-spacing: 4px;
+                    text-align: center;
                 }
 
-                
+
 
                 p {
                     font: 14px "OpenSans-Regular", sans-serif;
@@ -185,6 +192,7 @@ header {
             border-radius: 2px;
             transform: translateY(-50%);
             top: 45%;
+            cursor: pointer;
 
             a {
                 position: absolute;
@@ -218,8 +226,9 @@ header {
     .circle-wrapper {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
-        bottom: -4%;
+        transform: translate(-50%, -10%);
+        bottom: 0;
+        z-index: 1;
 
         svg {
             circle {
@@ -236,7 +245,7 @@ header {
                 opacity: 0.7;
                 stroke-width: 7px;
                 stroke-dasharray: 142 300;
-                transform: rotate(181deg);            
+                transform: rotate(181deg);
             }
         }
 
@@ -246,5 +255,36 @@ header {
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+
+    .triangle-left {
+        border: 130px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-right: 0 solid transparent;
+        border-left: 994px solid white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .triangle-right {
+        border: 130px solid transparent;
+        border-bottom: 0 solid transparent;
+        border-right: 0 solid transparent;
+        border-left: 994px solid white;
+        transform: scaleX(-1);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
     }
 }
