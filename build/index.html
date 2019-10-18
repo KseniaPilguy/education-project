@@ -16,16 +16,17 @@
   <header>
     <nav>
       <div class="container">
-        <div class="nav-brand">
+        <a href="#" id="top" class="nav-brand">
           <div class="white-box">
             <p>B</p>
           </div>
           <div class="transparent-box">
             <p>INO</p>
           </div>
-        </div>
+        </a>
         <div class="nav-menu">
-          <ul class="navigation">
+
+          <ul class="navigation" id="navigation">
             <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
             <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
             <li class="nav-item"><a class="nav-link" href="#">PORTFOLIO</a></li>
@@ -34,12 +35,15 @@
             <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
             <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
           </ul>
+
         </div>
+        <button id="nav-button">
+          <span></span>
+        </button>
       </div>
     </nav>
 
     <section class="carousel">
-
       <div class="carousel-item">
         <div class="container">
           <h4>Our Clients Are Our First Priority </h4>
@@ -60,7 +64,7 @@
       <div class="carousel-item">
         <div class="container">
           <h4>Our Clients Are Our First Priority </h4>
-          <h1> THIS IS OUR LOCATION </h1>
+          <h1> STAY WITH US </h1>
           <div class="figure">
             <div class="circle"></div>
           </div>
@@ -77,7 +81,7 @@
       <div class="carousel-item">
         <div class="container">
           <h4>Our Clients Are Our First Priority </h4>
-          <h1> WE GLAD TO SEE YOU HERE </h1>
+          <h1> GOOD LUCK </h1>
           <div class="figure">
             <div class="circle"></div>
           </div>
@@ -145,13 +149,12 @@
   </section>
   <hr>
 
-
   <section class="our-history">
     <div class="container">
-      <aside class="left">
+      <div class="left">
         <img src="img/Monitor.png">
-      </aside>
-      <aside class="rigth">
+      </div>
+      <div class="rigth">
         <h2>OUR HISTORY</h2>
         <p class="top">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been
           the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and
@@ -161,12 +164,12 @@
           containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.</p>
         <button>BROWSE OUR WORK</button>
-      </aside>
+      </div>
     </div>
   </section>
 
   <section class="our-servises">
-    <aside class="servise-left">
+    <div class="servise-left">
       <div class="container">
         <div class="service-item">
           <h2>OUR SERVICES</h2>
@@ -270,8 +273,8 @@
       </div>
       </div>
       </div>
-    </aside>
-    <aside class="servise-right"></aside>
+    </div>
+    <div class="servise-right"></div>
     <div class="slider-dots">
       <span class="slider-dots-item" onclick="currentSlide(1)"></span>
       <span class="slider-dots-item" onclick="currentSlide(2)"></span>
@@ -429,42 +432,32 @@
     <div class="hover"></div>
     <div class="container">
       <div class="wrapper">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="43" />
-        </svg>
-        <img src="img/white-heart.png">
+        <div class="circle">
+          <img src="img/white-heart.png"></div>
         <h6>3891 </h6>
         <p>User Favourites</p>
       </div>
       <div class="wrapper">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="43" />
-        </svg>
-        <img src="img/ticket.png">
+        <div class="circle">
+          <img src="img/ticket.png"></div>
         <h6>281K </h6>
         <p>Posts Last 24 Hours</p>
       </div>
       <div class="wrapper">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="43" />
-        </svg>
-        <img src="img/like.png">
+        <div class="circle">
+          <img src="img/like.png"></div>
         <h6>618 </h6>
         <p>Total Posts</p>
       </div>
       <div class="wrapper">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="43" />
-        </svg>
-        <img src="img/white-heart.png">
+        <div class="circle">
+          <img src="img/white-heart.png"></div>
         <h6>178 </h6>
         <p>Campaigns</p>
       </div>
       <div class="wrapper">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="43" />
-        </svg>
-        <img src="img/smth.png">
+        <div class="circle">
+          <img src="img/smth.png"></div>
         <h6>285 </h6>
         <p>Amazing Features</p>
       </div>
@@ -570,8 +563,8 @@
       <div class="figure">
         <div class="circle"></div>
       </div>
-      <section class="worker">
-        <div class="team-item one">
+      <div class="worker one">
+        <div class="team-item ">
           <img src="img/t1.png">
           <div class="hover"></div>
         </div>
@@ -579,9 +572,9 @@
           <h3>Kazi Erfan</h3>
           <p>UI/UX Designer</p>
         </div>
-      </section>
-      <section class="worker">
-        <div class="team-item two">
+      </div>
+      <div class="worker two">
+        <div class="team-item">
           <img src="img/t2.png">
           <div class="hover"></div>
         </div>
@@ -589,9 +582,9 @@
           <h3>Kazi Erfan</h3>
           <p>UI/UX Designer</p>
         </div>
-      </section>
-      <section class="worker">
-        <div class="team-item thee">
+      </div>
+      <div class="worker thee">
+        <div class="team-item">
           <img src="img/t3.png">
           <div class="hover"></div>
         </div>
@@ -599,9 +592,9 @@
           <h3>Kazi Erfan</h3>
           <p>UI/UX Designer</p>
         </div>
-      </section>
-      <section class="worker">
-        <div class="team-item four">
+      </div>
+      <div class="worker four">
+        <div class="team-item">
           <img src="img/t4.png">
           <div class="hover"></div>
         </div>
@@ -609,9 +602,9 @@
           <h3>Kazi Erfan</h3>
           <p>UI/UX Designer</p>
         </div>
-      </section>
-      <section class="worker">
-        <div class="team-item five">
+      </div>
+      <div class="worker five">
+        <div class="team-item">
           <img src="img/t5.png">
           <div class="hover"></div>
         </div>
@@ -619,7 +612,7 @@
           <h3>Kazi Erfan</h3>
           <p>UI/UX Designer</p>
         </div>
-      </section>
+      </div>
     </div>
     <img src="img/Shape-174.png" class="bg">
   </section>
@@ -633,16 +626,16 @@
         <div class="circle"></div>
       </div>
       <div class="companies">
-        <div class="companies-item"><i class="fab fa-node"></i></div>
-        <div class="companies-item"><i class="fab fa-aviato"></i></div>
-        <div class="companies-item"><i class="fab fa-stripe"></i></div>
-        <div class="companies-item"><i class="fab fa-ebay"></i></div>
-        <div class="companies-item"><i class="fab fa-d-and-d-beyond"></i></div>
-        <div class="companies-item"><i class="fab fa-dhl"></i></div>
-        <div class="companies-item"><i class="fab fa-apper"></i></div>
-        <div class="companies-item"><i class="fab fa-cpanel"></i></div>
-        <div class="companies-item"><i class="fab fa-hips"></i></div>
-        <div class="companies-item"><i class="fab fa-digg"></i></div>
+        <a href="#" class="companies-item"><i class="fab fa-node"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-aviato"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-stripe"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-ebay"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-d-and-d-beyond"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-dhl"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-apper"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-cpanel"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-hips"></i></a>
+        <a href="#" class="companies-item"><i class="fab fa-digg"></i></a>
       </div>
     </div>
   </section>
@@ -720,21 +713,21 @@
         <div class="circle"></div>
       </div>
       <div class="forms">
-        <aside class="information-article">
+        <div class="information-article">
           <h3>OUR ADDRESS</h3>
           <p>House #13, Streat road, Sydney <br> 2310 Australia</p>
           <h3>CALL US</h3>
           <p>+ 880 168 109 1425 <br> + 0216809142</p>
           <h3>EMAIL US</h3>
           <p>contactus@email.com</p>
-        </aside>
-        <aside class="for-users">
+        </div>
+        <div class="for-users">
           <input type="text" placeholder="Name">
           <input type="text" placeholder="Email">
           <input type="text" placeholder="Subject">
-          <input type="text" class="message" placeholder="Message">
+          <textarea class="message" placeholder="Message"></textarea>
           <button>SEND MESSAGE</button>
-        </aside>
+        </div>
       </div>
     </div>
   </section>
@@ -767,6 +760,13 @@
         <p> Kazi Erfan © All Rights Reserved </p>
       </div>
     </div>
+
+    <a href="#top" class="circle-wrapper">
+      <svg viewBox="0 0 100 100">
+        <circle class="outside" cx="50" cy="50" r="45" />
+      </svg>
+      <img src="img/arrow-top.png">
+    </a>
   </footer>
 
 

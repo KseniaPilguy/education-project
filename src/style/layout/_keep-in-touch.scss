@@ -6,7 +6,7 @@
     background-color: $light;
 
     .container {
-        padding: 150px 0;
+        padding: 150px 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -84,13 +84,19 @@
                     padding: 49px 12px 60px;
                 }
 
-                input {
+                input, 
+                textarea {
                     width: 464px;
                     height: 60px;
                     border: none;
                     border-bottom: 1px solid $border-light-color;
                     font: 14px 'OpenSans-SemiBold', sans-serif;
                     color: $new-grey;
+                    outline: none;
+
+                    &:focus {
+                        border-bottom: 1px solid $red;
+                    }
 
                     @media screen and (max-width: 578px) {
                         width: 400px;
@@ -105,9 +111,13 @@
                     }
                 }
 
+                textarea {
+                    resize: none;
+                }
+
                 .message {
-                    height: 175px;
-                    padding-bottom: 55px;
+                    height: 155px;
+                    margin-top: 20px;               
                 }
 
                 button {

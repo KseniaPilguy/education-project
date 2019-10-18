@@ -17,9 +17,62 @@ header {
             justify-content: space-between;
             align-items: center;
 
+            #nav-button {
+                width: 50px;
+                height: 40px;
+                background-color: transparent;
+                border: 1px solid $white;
+                position: relative;
+                outline: none;
+                cursor: pointer;
+                display: none;
+                right: 20px;
+
+                @media screen and (max-width: 978px) {
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: $red;
+                    border: 1px solid $red;
+                }
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 30px;
+                    height: 2px;
+                    background-color: $white;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 30px;
+                        height: 2px;
+                        background-color: $white;
+                        top: 8px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 30px;
+                        height: 2px;
+                        background-color: $white;
+
+                        bottom: 8px;
+                    }
+                }
+            }
+
             .nav-brand {
                 display: flex;
                 padding: 40px 0;
+                cursor: pointer;
 
                 .white-box {
                     background-color: $white;
@@ -60,13 +113,26 @@ header {
             }
 
             .nav-menu {
+
                 .navigation {
                     display: flex;
+                    
+                    @media screen and (max-width: 978px) {
+                        display: none;
+                    }
 
                     .nav-item {
 
+                        @media screen and (max-width: 978px) {
+                            margin: 20px 0 20px 45px;
+                        }
+
                         +li {
                             margin-left: 58px;
+
+                            @media screen and (max-width: 978px) {
+                                margin: 20px 0 20px 45px;
+                            }
                         }
 
                         &:hover {
@@ -76,7 +142,7 @@ header {
                             .nav-link {
                                 position: relative;
                                 color: #e74c3c;
-                                font-family: 'OpenSans-Bold', sans-serif;
+                                font-weight: bold;
 
                                 &::after {
                                     display: block;
@@ -88,6 +154,8 @@ header {
                             }
 
                         }
+
+
 
 
                         .nav-link {
@@ -105,6 +173,34 @@ header {
                                 margin: 22px auto 0;
                             }
                         }
+                    }
+                }
+
+                .show {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    top: 84%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    border-radius: 6px;
+                    height: 80px;
+                    align-items: center;
+                    border: 1px solid $white;
+                    
+                    @media screen and (max-width: 978px) {
+                        top: 84%;
+                        flex-direction: column;
+                        left: auto;
+                        right: -160px;
+                        width: 27%;
+                        border-radius: 6px;
+                        height: auto;
+                        align-items: flex-start;
+                        border: 1px solid $white;
+                        background-color: rgba(000,000,000,.5);
                     }
                 }
             }
@@ -135,6 +231,11 @@ header {
                     font: 24px 'SourceSansPro-Regular', sans-serif;
                     color: $white;
                     margin: 0 auto 15px;
+                    text-align: center;
+
+                    @media screen and (max-width: 378px) {
+                        margin: 60px auto 15px;
+                    }
                 }
 
                 h1 {
@@ -143,6 +244,11 @@ header {
                     margin: 0 auto 25px;
                     letter-spacing: 4px;
                     text-align: center;
+
+                    @media screen and (max-width: 978px) {
+                        font-size: 51px;
+                        letter-spacing: 0;
+                    }
                 }
 
 
@@ -154,10 +260,25 @@ header {
                     max-width: 674px;
                     margin-bottom: 70px;
                     line-height: 1.9;
+
+
+                    @media screen and (max-width: 978px) {
+                        max-width: 548px;
+
+                    }
+
+                    @media screen and (max-width: 378px) {
+                        margin-bottom: 30px;
+                        line-height: 1.4;
+                    }
                 }
 
                 .section-buttons {
                     display: flex;
+
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                    }
 
                     button {
                         width: 225px;
@@ -171,6 +292,10 @@ header {
 
                         +button {
                             margin-left: 30px;
+
+                            @media screen and (max-width: 768px) {
+                                margin: 20px 0 0;
+                            }
                         }
 
                         &:hover {
@@ -193,6 +318,10 @@ header {
             transform: translateY(-50%);
             top: 45%;
             cursor: pointer;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
 
             a {
                 position: absolute;
@@ -227,8 +356,24 @@ header {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -10%);
-        bottom: 0;
+        bottom: 4px;
         z-index: 1;
+
+        @media screen and (max-width: 1200px) {
+            transform: translate(-50%, -25%);
+        }
+
+        @media screen and (max-width: 978px) {
+            transform: translate(-50%, -43%);
+        }
+
+        @media screen and (max-width: 768px) {
+            transform: translate(-50%, -64%);
+        }
+
+        @media screen and (max-width: 768px) {
+            transform: translate(-45%, -75%);
+        }
 
         svg {
             circle {
@@ -246,6 +391,10 @@ header {
                 stroke-width: 7px;
                 stroke-dasharray: 142 300;
                 transform: rotate(181deg);
+
+                @media screen and (max-width: 1200px) {
+                    display: none;
+                }
             }
         }
 
